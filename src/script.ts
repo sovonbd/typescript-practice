@@ -159,7 +159,14 @@ import { Player } from "./player.js";
 
 // Generic
 
-const addID = <T>(obj: T) => {
+const addID = <
+  T extends {
+    name: string;
+    age: number;
+  }
+>(
+  obj: T
+) => {
   let id = Math.floor(Math.random() * 100);
   return { ...obj, id };
 };
@@ -167,6 +174,11 @@ const addID = <T>(obj: T) => {
 let user = addID({
   name: "sovon",
   age: 30,
+  country: "Bangladesh",
 });
 
-user.age;
+// user.age;
+
+// let user = "T";
+
+addID(user);

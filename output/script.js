@@ -114,6 +114,9 @@ const addID = (obj) => {
 let user = addID({
     name: "sovon",
     age: 30,
+    country: "Bangladesh",
 });
-user.age;
+// user.age;
+// let user = "T";
+addID(user);
 export {};

@@ -1,4 +1,3 @@
-"use strict";
 // const multiply = (a: number, b: number) => {
 //   return a * b;
 // };
@@ -80,23 +79,41 @@
 // players.push(tumpa);
 // console.log(players);
 // Access modifier
-class Player {
-    constructor(n, a, c) {
-        this.name = n;
-        this.age = a;
-        this.country = c;
-    }
-    play() {
-        console.log(`${this.name}, ${this.age}, ${this.country}`);
-    }
-}
-const sovon = new Player("sovon", 30, "Bangladesh");
-const tumpa = new Player("tumpa", 30, "Bangladesh");
-sovon.name = "izhaan";
-console.log(sovon.name);
-console.log(sovon.age);
-console.log(sovon.country);
-const players = [];
-players.push(sovon);
-players.push(tumpa);
+// const sovon = new Player("sovon", 30, "Bangladesh");
+// const tumpa = new Player("tumpa", 30, "Bangladesh");
+// // sovon.name = "izhaan";
+// // console.log(sovon.name);
+// console.log(sovon.age);
+// console.log(sovon.country);
+// const players: Player[] = [];
+// players.push(sovon);
+// players.push(tumpa);
 // console.log(players);
+// Interfaces
+// interface RectangleOption {
+//   width: number;
+//   length: number;
+// }
+// const drawRectangle = (option: RectangleOption) => {
+//   let width = option.width;
+//   let length = option.length;
+// };
+// let shape = {
+//   width: 45,
+//   length: 45,
+//   height: 45,
+// };
+// drawRectangle(shape);
+// const sovon: IsPlayer = new Player("sovon", 30, "Bangladesh");
+// console.log(sovon.getAge());
+// Generic
+const addID = (obj) => {
+    let id = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, obj), { id });
+};
+let user = addID({
+    name: "sovon",
+    age: 30,
+});
+user.age;
+export {};

@@ -2,6 +2,9 @@
 //   return a * b;
 // };
 
+import { IsPlayer } from "./interface/IsPlayer.js";
+import { Player } from "./player.js";
+
 // console.log(multiply(3, 4));
 
 // array
@@ -116,32 +119,54 @@
 // console.log(players);
 
 // Access modifier
-class Player {
-  private name: string;
-  public age: number;
-  readonly country: string;
 
-  constructor(n: string, a: number, c: string) {
-    this.name = n;
-    this.age = a;
-    this.country = c;
-  }
+// const sovon = new Player("sovon", 30, "Bangladesh");
+// const tumpa = new Player("tumpa", 30, "Bangladesh");
+// // sovon.name = "izhaan";
+// // console.log(sovon.name);
+// console.log(sovon.age);
+// console.log(sovon.country);
 
-  play() {
-    console.log(`${this.name}, ${this.age}, ${this.country}`);
-  }
-}
+// const players: Player[] = [];
 
-const sovon = new Player("sovon", 30, "Bangladesh");
-const tumpa = new Player("tumpa", 30, "Bangladesh");
-sovon.name = "izhaan";
-console.log(sovon.name);
-console.log(sovon.age);
-console.log(sovon.country);
-
-const players: Player[] = [];
-
-players.push(sovon);
-players.push(tumpa);
+// players.push(sovon);
+// players.push(tumpa);
 
 // console.log(players);
+
+// Interfaces
+
+// interface RectangleOption {
+//   width: number;
+//   length: number;
+// }
+
+// const drawRectangle = (option: RectangleOption) => {
+//   let width = option.width;
+//   let length = option.length;
+// };
+
+// let shape = {
+//   width: 45,
+//   length: 45,
+//   height: 45,
+// };
+
+// drawRectangle(shape);
+
+// const sovon: IsPlayer = new Player("sovon", 30, "Bangladesh");
+// console.log(sovon.getAge());
+
+// Generic
+
+const addID = <T>(obj: T) => {
+  let id = Math.floor(Math.random() * 100);
+  return { ...obj, id };
+};
+
+let user = addID({
+  name: "sovon",
+  age: 30,
+});
+
+user.age;

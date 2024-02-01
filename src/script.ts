@@ -182,3 +182,20 @@ let user = addID({
 // let user = "T";
 
 addID(user);
+
+// generic in interface
+
+interface ApiResponse<T> {
+  name: string;
+  num: number;
+  data: T;
+}
+
+const response: ApiResponse<object> = {
+  name: "sovon",
+  num: 1,
+  data: {
+    nam: "svn",
+    other: 2,
+  },
+};

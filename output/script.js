@@ -119,4 +119,12 @@ let user = addID({
 // user.age;
 // let user = "T";
 addID(user);
+const response = {
+    name: "sovon",
+    num: 1,
+    data: {
+        nam: "svn",
+        other: 2,
+    },
+};
 export {};

@@ -143,4 +143,10 @@ const res = {
     },
 };
 console.log(res);
+// Tuples
+let a = [3, "hello", { p: 3 }];
+a[0] = 4;
+console.log(a);
+let b = [3, "hello", { p: 3 }];
 export {};
+// b[0] = "stirng";

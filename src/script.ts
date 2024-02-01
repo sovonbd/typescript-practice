@@ -224,3 +224,12 @@ const res: ApiRes<object> = {
 };
 
 console.log(res);
+
+// Tuples
+
+let a = [3, "hello", { p: 3 }];
+a[0] = 4;
+console.log(a);
+
+let b: [number, string, object] = [3, "hello", { p: 3 }];
+// b[0] = "stirng";

@@ -199,3 +199,28 @@ const response: ApiResponse<object> = {
     other: 2,
   },
 };
+
+// console.log(response.data);
+
+// ENUMS
+enum RType {
+  success,
+  authorized,
+  unauthorized,
+}
+
+interface ApiRes<T> {
+  status: number;
+  type: RType;
+  data: T;
+}
+
+const res: ApiRes<object> = {
+  status: 200,
+  type: RType.authorized,
+  data: {
+    name: "sovon",
+  },
+};
+
+console.log(res);

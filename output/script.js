@@ -127,4 +127,20 @@ const response = {
         other: 2,
     },
 };
+// console.log(response.data);
+// ENUMS
+var RType;
+(function (RType) {
+    RType[RType["success"] = 0] = "success";
+    RType[RType["authorized"] = 1] = "authorized";
+    RType[RType["unauthorized"] = 2] = "unauthorized";
+})(RType || (RType = {}));
+const res = {
+    status: 200,
+    type: RType.authorized,
+    data: {
+        name: "sovon",
+    },
+};
+console.log(res);
 export {};
